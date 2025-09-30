@@ -69,7 +69,7 @@ export default function Services() {
         to create an innovative technology solution that enable your business to
         be more agile and competitive.
       </p>
-      <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
+      <div className="grid md:grid-cols-3 lg:grid-cols-4 gap-8">
         {services.map((service, idx) => (
           <div key={idx} className="service-card">
             <div className="service-icon">{service.icon}</div>

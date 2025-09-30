@@ -5,6 +5,7 @@ const WhyChoseUs = () => {
   return (
     <section className="w-full max-w-[1180px] mx-auto mt-12 p-4">
       <div
+        className="flex flex-col md:flex-row"
         style={{
           display: "flex",
           justifyContent: "center",
@@ -70,7 +71,10 @@ const WhyChoseUs = () => {
           >
             Request Call Back
           </h3>
-          <form style={{ display: "flex", flexDirection: "column", gap: 12 }}>
+          <form
+            className="text-gray-600"
+            style={{ display: "flex", flexDirection: "column", gap: 12 }}
+          >
             <input
               type="text"
               placeholder="Your Name"

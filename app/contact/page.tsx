@@ -92,7 +92,7 @@ export default function ContactPage() {
           style={{
             flex: "1 1 350px",
             minWidth: 320,
-            padding: "2rem 1rem 2rem 2rem",
+            // padding: "2rem 1rem 2rem 2rem",
             display: "flex",
             flexDirection: "column",
             justifyContent: "center",

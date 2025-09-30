@@ -94,7 +94,7 @@ export default function Page() {
         {/* Why Choose Us Section */}
         <WhyChoseUs />
         {/* Testimonial Section */}
-        <Testimonial />
+        {/* <Testimonial /> */}
         <style jsx>{`
           .vector-bg-scroll {
             position: absolute;
