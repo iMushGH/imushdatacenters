@@ -49,7 +49,7 @@ export default function Header() {
   const [serviceDropdownOpen, setServiceDropdownOpen] = useState(false);
   const pathname = usePathname();
   return (
-    <header className="w-full border-b bg-[#F7F2EE] sticky top-0 z-50 header-shadow">
+    <header className="w-full border-b bg-[#F7F2EE] sticky top-0 z-50 header-shadow border-b-amber-800">
       <div className="max-w-5xl mx-auto flex items-center justify-between px-4 py-3">
         <a
           href="/"
