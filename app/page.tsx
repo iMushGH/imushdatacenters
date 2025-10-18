@@ -1,5 +1,7 @@
 "use client";
-import React from "react";
+import React, { useEffect } from "react";
+import AOS from "aos";
+import "aos/dist/aos.css";
 import Head from "next/head";
 import ImageSlider from "./ImageSlider";
 import Services from "./components/Services";
@@ -9,6 +11,12 @@ import WhyChoseUs from "./WhyChoseUs";
 import Query from "./components/Query";
 
 export default function Page() {
+  useEffect(() => {
+    AOS.init({
+      duration: 1000,
+      once: true,
+    });
+  }, []);
   return (
     <>
       <Head>
@@ -44,7 +52,10 @@ export default function Page() {
           </svg>
         </div>
         {/* Hero Section with Slider */}
-        <section className="w-full  mx-auto text-center mb-12">
+        <section
+          className="w-full  mx-auto text-center mb-12"
+          data-aos="fade-up"
+        >
           <ImageSlider />
           <div
             style={{
@@ -88,13 +99,21 @@ export default function Page() {
           </div>
         </section>
         {/* Services Section */}
-        <Services />
+        <div data-aos="fade-up" data-aos-delay="200">
+          <Services />
+        </div>
         {/* Contact Card Section */}
-        <Query />
+        <div data-aos="fade-up" data-aos-delay="400">
+          <Query />
+        </div>
         {/* Why Choose Us Section */}
-        <WhyChoseUs />
+        <div data-aos="fade-up" data-aos-delay="600">
+          <WhyChoseUs />
+        </div>
         {/* Testimonial Section */}
-        {/* <Testimonial /> */}
+        {/* <div data-aos="fade-up" data-aos-delay="800">
+          <Testimonial />
+        </div> */}
         <style jsx>{`
           .vector-bg-scroll {
             position: absolute;

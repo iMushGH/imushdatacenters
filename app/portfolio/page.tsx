@@ -8,13 +8,27 @@ const categories = [
       {
         name: "Office CCTV",
         images: [
-          { src: "/slider1.jpg", caption: "Office CCTV Example 1" },
-          { src: "/slider2.jpg", caption: "Office CCTV Example 2" },
+          { src: "/cctv/waha_1.jpg", caption: "Office CCTV Example 1" },
+          { src: "/cctv/waha_2.jpg", caption: "Office CCTV Example 2" },
+          { src: "/cctv/waha_3.jpg", caption: "Office CCTV Example 3" },
+          { src: "/cctv/waha_4.jpg", caption: "Office CCTV Example 4" },
+          { src: "/cctv/waha_5.jpg", caption: "Office CCTV Example 5" },
+          { src: "/cctv/waha_6.jpg", caption: "Office CCTV Example 6" },
+          { src: "/cctv/waha_7.jpg", caption: "Office CCTV Example 7" },
+          { src: "/cctv/waha_8.jpg", caption: "Office CCTV Example 8" },
         ],
       },
       {
         name: "Home CCTV",
-        images: [{ src: "/slider2.jpg", caption: "Home CCTV Example 1" }],
+        images: [
+          { src: "/cctv/home/alajo_4.jpg", caption: "ALAJO_DVR SETUP" },
+          { src: "/cctv/home/alajo_1.jpg", caption: "ALAJO_DVR SETUP" },
+          { src: "/cctv/home/alajo_2.jpg", caption: "ALAJO_DVR SETUP" },
+          { src: "/cctv/home/alajo_3.jpg", caption: "ALAJO_DVR SETUP" },
+          { src: "/cctv/home/alajo_4.jpg", caption: "ALAJO_DVR SETUP" },
+          { src: "/cctv/home/alajo_5.jpg", caption: "ALAJO_DVR SETUP" },
+          { src: "/cctv/home/alajo_6.jpg", caption: "ALAJO_DVR SETUP" },
+        ],
       },
     ],
   },
@@ -26,7 +40,31 @@ const categories = [
         images: [
           {
             src: "/general_networking/gn_1.jpg",
-            caption: "LAN Setup Example 1",
+            caption: "LAN",
+          },
+          {
+            src: "/general_networking/net_1.jpg",
+            caption: "LAN",
+          },
+          {
+            src: "/general_networking/net_2.jpg",
+            caption: "LAN",
+          },
+          {
+            src: "/general_networking/net_3.jpg",
+            caption: "LAN",
+          },
+          {
+            src: "/general_networking/net_4.jpg",
+            caption: "LAN",
+          },
+          {
+            src: "/general_networking/net_5.jpg",
+            caption: "LAN",
+          },
+          {
+            src: "/general_networking/net_6.jpg",
+            caption: "LAN",
           },
         ],
       },
@@ -57,6 +95,22 @@ const categories = [
           },
           {
             src: "/portfolio_cat/intercom/icom_2.jpg",
+            caption: "Apartment Intercom 2",
+          },
+          {
+            src: "/cctv/door_bell_1.jpg",
+            caption: "Apartment Intercom 2",
+          },
+          {
+            src: "/cctv/door_bell_2.jpg",
+            caption: "Apartment Intercom 2",
+          },
+          {
+            src: "/cctv/door_bell_3.jpg",
+            caption: "Apartment Intercom 2",
+          },
+          {
+            src: "/cctv/door_bell.jpg",
             caption: "Apartment Intercom 2",
           },
         ],
