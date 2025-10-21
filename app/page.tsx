@@ -1,6 +1,7 @@
 "use client";
 import React, { useEffect } from "react";
 import AOS from "aos";
+// @ts-ignore: missing type declarations for CSS side-effect import
 import "aos/dist/aos.css";
 import Head from "next/head";
 import ImageSlider from "./ImageSlider";
@@ -35,22 +36,6 @@ export default function Page() {
         className="min-h-screen bg-white flex flex-col items-center justify-center p-0"
         style={{ position: "relative", overflow: "hidden" }}
       >
-        {/* Scrolling Vector Background */}
-        <div className="vector-bg-scroll">
-          <svg
-            width="100%"
-            height="180"
-            viewBox="0 0 1440 180"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path
-              d="M0,60 C360,180 1080,0 1440,120 L1440,180 L0,180 Z"
-              fill="#8D6944"
-              fillOpacity="0.12"
-            />
-          </svg>
-        </div>
         {/* Hero Section with Slider */}
         <section
           className="w-full  mx-auto text-center mb-12"
