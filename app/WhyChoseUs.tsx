@@ -3,7 +3,7 @@ import React from "react";
 const WhyChoseUs = () => {
   // component logic here
   return (
-    <section className="w-full max-w-[1180px] mx-auto mt-12 p-4">
+    <section className="max-w-full mx-auto mt-12 py-24 px-4 bg-amber-100">
       <div
         className="flex flex-col md:flex-row"
         style={{

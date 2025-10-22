@@ -32,3 +32,14 @@ export async function POST(request: Request) {
 
   return NextResponse.json({ success: true });
 }
+
+export async function GET() {
+  try {
+    const { getMessages } = await import('./db');
+    const messages = await getMessages();
+    return NextResponse.json({ messages });
+  } catch (err) {
+    console.error('GET /api/contact error', err);
+    return NextResponse.json({ error: 'Failed to fetch messages' }, { status: 500 });
+  }
+}

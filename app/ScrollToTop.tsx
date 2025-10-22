@@ -19,10 +19,16 @@ export default function ReturnToTopButton() {
   return (
     <button
       onClick={handleClick}
-      className={`fixed bottom-6 right-6 z-50 p-3 rounded-full shadow-lg bg-[#c9b9a9] text-white dark:bg-[#8D6944] transition-opacity duration-300 hover:bg-[#342a20] dark:hover:bg-[#836546] focus:outline-none focus:ring-2 focus:ring-[#b09b86] ${
-        visible ? "opacity-100" : "opacity-0 pointer-events-none"
+      className={`fixed bottom-6 right-6 z-[11000] p-3 rounded-full shadow-lg bg-[#c9b9a9] text-white dark:bg-[#8D6944] transition-opacity duration-300 hover:bg-[#342a20] dark:hover:bg-[#836546] focus:outline-none focus:ring-2 focus:ring-[#b09b86] ${
+        visible
+          ? "opacity-100 pointer-events-auto"
+          : "opacity-0 pointer-events-none"
       }`}
       aria-label="Return to top"
+      style={{
+        // ensure we have a well-known stacking context above dynamic components
+        zIndex: 11000,
+      }}
     >
       <svg
         xmlns="http://www.w3.org/2000/svg"
