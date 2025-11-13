@@ -1,5 +1,6 @@
 "use client";
 import React, { useState } from "react";
+import { FaFacebook, FaInstagram, FaTiktok } from "react-icons/fa";
 
 export default function ContactPage() {
   const [form, setForm] = useState({ name: "", email: "", message: "" });
@@ -133,8 +134,57 @@ export default function ContactPage() {
               <strong>Phone:</strong>{" "}
               <a href="tel:+233544955728" style={{ color: "#0070f3" }}>
                 +233 544 955 728
+              </a>{" "}
+              <br />
+              <strong>Phone:</strong>{" "}
+              <a href="tel:+233242739374" style={{ color: "#0070f3" }}>
+                +233 242 739 374
               </a>
             </p>
+            {/* Social Media Links */}
+            <hr className="my-4" />
+            <div
+              className="flex flex-row items-center"
+              style={{ marginBottom: 10 }}
+            >
+              <strong>{<FaFacebook />}</strong>{" "}
+              <a
+                href="https://www.facebook.com/imushdatacenter/"
+                style={{ color: "#0070f3" }}
+                className="ml-2"
+              >
+                @imushdatacenter
+              </a>{" "}
+              <br />
+            </div>
+            <div
+              className="flex flex-row items-center"
+              style={{ marginBottom: 10 }}
+            >
+              <strong>{<FaInstagram />}</strong>{" "}
+              <a
+                href="https://www.instagram.com/imushdatacente/"
+                style={{ color: "#0070f3" }}
+                className="ml-2"
+              >
+                @imushdatacente
+              </a>{" "}
+              <br />
+            </div>
+            <div
+              className="flex flex-row items-center"
+              style={{ marginBottom: 10 }}
+            >
+              <strong>{<FaTiktok />}</strong>{" "}
+              <a
+                href="https://www.tiktok.com/@imushdatacenter"
+                style={{ color: "#0070f3" }}
+                className="ml-2"
+              >
+                @imushdatacenter
+              </a>{" "}
+              <br />
+            </div>
           </div>
           <div
             style={{
