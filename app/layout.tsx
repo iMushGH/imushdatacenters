@@ -35,13 +35,13 @@ export const metadata: Metadata = {
     description:
       "Your trusted partner for CCTV installations, networking, telephone systems, and IT solutions.",
     url: "https://imushdatacenter.com",
-    siteName: "iMush Data Center",
+    siteName: "iMush Data Center & Engineering Services",
     images: [
       {
         url: "/public/globe.svg",
         width: 1200,
         height: 630,
-        alt: "iMush Data Center Logo",
+        alt: "iMush Data Center & Engineering Services Logo",
       },
     ],
     locale: "en_US",
