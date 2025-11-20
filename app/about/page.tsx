@@ -1,4 +1,17 @@
-'use client";';
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "About | iMush Data Center",
+  description:
+    "Learn about iMush Data Center — our mission, leadership and services for CCTV, networking and IT solutions.",
+  openGraph: {
+    title: "About | iMush Data Center",
+    description:
+      "Learn about iMush Data Center — our mission, leadership and services for CCTV, networking and IT solutions.",
+    url: "https://imushdatacenter.com/about",
+  },
+};
+
 export default function AboutPage() {
   return (
     <main>

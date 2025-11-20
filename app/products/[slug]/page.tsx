@@ -1,7 +1,8 @@
-// "use client";
+// Server component: product detail with metadata and JSON-LD
 import fs from "fs";
 import path from "path";
 import React from "react";
+import type { Metadata } from "next";
 
 type Props = {
   params: { slug: string };
@@ -11,6 +12,31 @@ function readProducts() {
   const p = path.join(process.cwd(), "data", "products.json");
   if (!fs.existsSync(p)) return {};
   return JSON.parse(fs.readFileSync(p, "utf8") || "{}");
+}
+
+export async function generateMetadata({
+  params,
+}: {
+  params: { slug: string };
+}): Promise<Metadata> {
+  const products = readProducts();
+  const product = (products as any)[params.slug];
+  if (!product) {
+    return {
+      title: "Product not found | iMush Data Center",
+    };
+  }
+
+  return {
+    title: `${product.title} | iMush Data Center`,
+    description:
+      product.description || "Product details from iMush Data Center",
+    openGraph: {
+      title: `${product.title} | iMush Data Center`,
+      description: product.description || "",
+      images: product.image ? [product.image] : [],
+    },
+  };
 }
 
 export default function ProductPage({ params }: Props) {
@@ -32,6 +58,28 @@ export default function ProductPage({ params }: Props) {
 
   return (
     <main style={{ maxWidth: 1000, margin: "0 auto", padding: "2rem" }}>
+      {/* JSON-LD structured data for SEO */}
+      {product && (
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org/",
+              "@type": "Product",
+              name: product.title,
+              description: product.description,
+              image: product.image ? [product.image] : undefined,
+              offers: product.price
+                ? {
+                    "@type": "Offer",
+                    price: String(product.price).replace(/[^0-9.]/g, ""),
+                    priceCurrency: "GHS",
+                  }
+                : undefined,
+            }),
+          }}
+        />
+      )}
       <div style={{ display: "flex", gap: 24, flexWrap: "wrap" }}>
         <img
           src={product.image}
